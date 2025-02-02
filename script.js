@@ -147,9 +147,9 @@
     function downloadPdf() {
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF();
-        let yPos = 10; // Initial position
-        let pageHeight = doc.internal.pageSize.height; // Get page height
-        let margin = 10; // Margin to avoid cutoff
+        let yPos = 10;
+        let pageHeight = doc.internal.pageSize.height;
+        let margin = 10;
     
         doc.setFontSize(16);
         doc.text("Weekly Timetable", 20, yPos);
@@ -161,10 +161,9 @@
         Array.from(daySections).forEach(daySection => {
             const dayTitle = daySection.getElementsByTagName("h3")[0].textContent;
             
-            // Check if the next text will exceed page height
             if (yPos + 10 > pageHeight - margin) {
-                doc.addPage(); // Add a new page
-                yPos = 10; // Reset position
+                doc.addPage();
+                yPos = 10; 
             }
     
             doc.setFontSize(14);
@@ -175,7 +174,6 @@
             Array.from(classList.getElementsByTagName("li")).forEach(classItem => {
                 doc.setFontSize(12);
     
-                // Check if content will exceed page
                 if (yPos + 10 > pageHeight - margin) {
                     doc.addPage();
                     yPos = 10;
