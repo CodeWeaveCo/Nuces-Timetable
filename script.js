@@ -6,7 +6,7 @@
 
     async function fetchTimetableData() {
         try {
-            const response = await fetch("/Timetable.xlsx");
+            const response = await fetch("./Timetable.xlsx");
             if (!response.ok) {
                 alert("Failed to load timetable data. Retry Loading if the issue persists Please mail codeweaveco@gmail.com ");
                 return;
