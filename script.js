@@ -7,16 +7,16 @@
     async function fetchTimetableData() {
         try {
             const response = await fetch("./Timetable.xlsx");
-            if (!response.ok) {
-                alert("Failed to load timetable data. Retry Loading if the issue persists Please mail codeweave.inc@gmail.com ");
+            //if (!response.ok) {
+                //alert("Failed to load timetable data. Retry Loading if the issue persists Please mail codeweave.inc@gmail.com ");
                 return;
             }
 
             const arrayBuffer = await response.arrayBuffer();
             processUploadedFile(arrayBuffer);
-        } catch (error) {
-            alert("Failed to load timetable data. Retry Loading if the issue persists Please mail codeweave.inc@gmail.com ");
-        }
+        } //catch (error) {
+            //alert("Failed to load timetable data. Retry Loading if the issue persists Please mail codeweave.inc@gmail.com ");
+        //}
     }
 
     function handleFileUpload(event) {
@@ -187,3 +187,4 @@
         doc.save("timetable.pdf");
     }
     
+
