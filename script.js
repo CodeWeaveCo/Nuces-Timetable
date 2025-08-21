@@ -8,7 +8,7 @@
         try {
             const response = await fetch("./Timetable.xlsx");
             if (!response.ok) {
-                alert("Failed to load timetable data. Retry Loading if the issue persists blah1 Please mail codeweave.inc@gmail.com ");
+                alert("Failed to load timetable data. Retry Loading if the issue persists Please mail codeweave.inc@gmail.com ");
                 return;
             }
 
@@ -187,5 +187,6 @@
         doc.save("timetable.pdf");
     }
     
+
 
 
